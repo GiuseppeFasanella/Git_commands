@@ -3,61 +3,21 @@ A bunch of useful commands in git.
 
 INSTALLING GIT
 
-1. Mac : http://sourceforge.net/projects/git-osx-installer/
-
-2. Windows : http://msysgit.github.io/
-
-3. Linux : apt-get install git-core OR yum install git-core
-
-ABOUT GIT
-
-1. Git is a version control tool that saves changes to groups of files so you can revert back if needed.
-
-2. There are different types of version control tools
-
-a. Local Version Control saves changes to files in a database
-
-b. Centralized Version Control saves changes to a shared server
-
-c. Distributed Version Control allows for easier sharing of files then LVC and also eliminates problems that could occur if access to the server is lost under a CVC system.
-
-d. DVC clients have a complete backup of the files on their computer. If the server is lost the client just waits to regain contact and then uploads changes.
-
-3. When you commit changes to files Git stores a reference of what the files look like at that moment. If a file isn't changed it isn't stored again.
-
-4. Each client has a complete history of all changes stored locally. The client can also access all changes made to the files historically with a simple command. Also those files cannot be changed without Git knowing and changes are difficult to lose.
-
-5. Files transition between 3 states with Git
-
-a. Modified Files are files that have been recently changed
-
-b. Staged Files have been marked to be saved
-
-c. Committed Files are those that have been saved
-
-6. Git saves all file changes to a directory as a compressed database. 
-
-a. You modify files in Working Directory
-
-b. You notify that want to save changes in your Staging Area
-
-c. After you Commit the file changes are saved in the Git directory
+Linux : apt-get install git-core OR yum install git-core
 
 USING GIT
 
-1. git config --global user.name "Derek Banas" 
+ git config --global user.name "Giuseppe Fasanella" 
 
-2. git config --global user.email derekbanas@verizon.net
+ git config --global user.email my_email
 
-3. git config --global core.editor "vim" # Set editor as vim
+ git config --global core.editor "emacs" # Set editor as emacs
 
-4. git config --global core.editor "edit -w" # Set editor as Text Wrangler Mac
+ git config --list # Show settings
 
-5. git config --list # Show settings
+ git help OR git help [COMMAND] OR git help add
 
-6. git help OR git help [COMMAND] OR git help add
-
-7. ---------------- Track a directory ----------------
+---------------- Track a directory (You work in local)----------------
 
 a. Go to directory
 
@@ -75,9 +35,13 @@ b. By name : git add AndroidManifest.xml
 
 a. Create a .gitignore file
 
+It's really useful: inside it you write ".C~" and it won't add the temporary files, for examples
+
+My usual settings are: ".C~",".root",".txt"
+
 b. https://github.com/github/gitignore
 
-10. ---------------- git commit -m 'Initial project version' 
+10. ---------------- git commit -m 'A meaningful comment' 
 
 a. Commits the changes and sets an abbreviated commit message
 
