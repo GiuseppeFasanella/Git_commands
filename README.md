@@ -25,7 +25,7 @@ b. ls -a shows all files
 
 c. git init # Creates the .git directory
 
-8. ---------------- Start tracking files ----------------
+---------------- Start tracking files ----------------
 
 a. By type : git add *.java
 
@@ -39,29 +39,27 @@ It's really useful: inside it you write ".C~" and it won't add the temporary fil
 
 My usual settings are: ".C~",".root",".txt"
 
-b. https://github.com/github/gitignore
+------------------ Once ready:
 
-10. ---------------- git commit -m 'A meaningful comment' 
+git commit -m 'A meaningful comment' 
 
-a. Commits the changes and sets an abbreviated commit message
+---------------- git status ----------------
 
-11. ---------------- git status ----------------
+Shows the state of your files meaning if they are tracked, have been modified and the branch your on.
 
-a. Shows the state of your files meaning if they are tracked, have been modified and the branch your on.
+---------------- Stage A Modified File ----------------
 
-12. ---------------- Stage A Modified File ----------------
+Change the file and save
 
-a. Change the file and save
+git diff # Shows what you changed, but haven't staged
 
-b. git diff # Shows what you changed, but haven't staged
+git add AndroidManifest.xml # Stage file
 
-c. git add AndroidManifest.xml # Stage file
+git diff --cached # Shows what has been staged, but not committed 
 
-d. git diff --cached # Shows what has been staged, but not committed 
+---------------- Commit The Changes ----------------
 
-13. ---------------- Commit The Changes ----------------
-
-a. commit # Opens the editor we defined above or vi
+a. commit # Opens the editor we defined above
 
 b. In vi click [ESC] i to enter insert mode
 
@@ -81,7 +79,7 @@ i. Hit [ESC] and type wq to save and exit
 
 j. git commit -a -m 'Changed comment' # Skips staging and commit message
 
-14. ---------------- Remove a File ----------------
+---------------- Remove a File ----------------
 
 a. rm DeleteMe.txt # If you remove a file it shows as "Changed but not updated"
 
@@ -97,7 +95,7 @@ f. git rm --cached DeleteMe.txt # Keep file, but remove from staging area
 
 g. git mv DeleteMe.txt Delete.txt # Renames a file
 
-15. ---------------- Log Commit History  ----------------
+---------------- Log Commit History  ----------------
 
 a. git log # Shows all of the previous commit messages in reverse order
 
@@ -125,15 +123,16 @@ h. git log --author="Derek Banas" # Changes made by author
 
 i. git log --before="2014-04-13" # Changes made before this date
 
-16. ---------------- Undoing a Commit ----------------
+---------------- Undoing a Commit ----------------
 
 a. git commit --amend # If you want to change your previous commit
 
 b. Normally done if you forgot to stage a file, or to change the commit message
 
-17. ---------------- Unstage a File ---------------- 
+---------------- Unstage a File ---------------- 
 
 a. git reset HEAD AndroidManifest.xml
+
 
 ---------------- GIT PART 2 ---------------- 
 
