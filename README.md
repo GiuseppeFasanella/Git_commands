@@ -7,15 +7,15 @@ Linux : apt-get install git-core OR yum install git-core
 
 USING GIT
 
- git config --global user.name "Giuseppe Fasanella" 
+git config --global user.name "Giuseppe Fasanella" 
 
- git config --global user.email my_email
+git config --global user.email my_email
 
- git config --global core.editor "emacs" # Set editor as emacs
+git config --global core.editor "emacs" # Set editor as emacs
 
- git config --list # Show settings
+git config --list # Show settings
 
- git help OR git help [COMMAND] OR git help add
+git help OR git help [COMMAND] OR git help add
 
 ---------------- Track a directory (You work in local)----------------
 
