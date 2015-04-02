@@ -57,27 +57,8 @@ git add AndroidManifest.xml # Stage file
 
 git diff --cached # Shows what has been staged, but not committed 
 
----------------- Commit The Changes ----------------
-
-a. commit # Opens the editor we defined above
-
-b. In vi click [ESC] i to enter insert mode
-
-c. Type a heading that briefly explains the changes in 50 characters or less
-
-d. Describes the original problem that is being addressed
-
-e. Describes the specific change being made
-
-f. Describes the result of the change
-
-g. Describes any future improvements
-
-h. Post a closes bug notation Closes-Bug: #1291621
-
-i. Hit [ESC] and type wq to save and exit
-
-j. git commit -a -m 'Changed comment' # Skips staging and commit message
+---------------- Commit the changes -----------------------
+ git commit -a -m 'Changed comment' # Skips staging and commit message
 
 ---------------- Remove a File ----------------
 
