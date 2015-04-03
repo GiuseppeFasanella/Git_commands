@@ -117,13 +117,9 @@ a. git reset HEAD AndroidManifest.xml
 
 ---------------- GIT PART 2 ---------------- 
 
-1. GitHub allows you to host your code repositories online. I'll set up everything for it in this video. I'll also cover remote depositories in general.
+1. GitHub allows you to host your code repositories online.
 
-2. Remote repositories are normally read only, or read write only to those who are authorized 
-
-3. You either push or pull updates from these remote repositories.
-
-4. To push your directory to GitHub ---------------- 
+# To push your directory to GitHub (If you have already a directory in local) 
 
 a. git init
 
@@ -131,7 +127,7 @@ b. git add . # Stages all new and modified files and directories
 
 c. git commit -m 'Initial Project Version'
 
-d. git remote add origin https://github.com/derekbanas/SimpleFragment.git
+d. git remote add origin https://github.com/derekbanas/SimpleFragment.git #you can create a remote repository via browser on your github page
 
 e. git push origin master
 
@@ -145,7 +141,7 @@ a. Pulls all changes and saves them to your directory
 
 8. How to push changes to GitHub ---------------- 
 
-a. I add .gitignore for Android on my local machine
+a. I add .gitignore on my local machine
 
 b. In the terminal type
 
@@ -175,7 +171,7 @@ f. git tag -a v0.01 c930a8
 
 I. You can tag commits after the event also. When you enter this command an editor opens for you to leave a comment. The final part is the hash for the commit you want to tag.
 
-g. git push sf v0.1 # You can also push tags
+g. git push sf v0.1 # You can also push tags. In this way you'll have different releases of your code in github
 
 I. The tag shows up under releases on GitHub
 
@@ -187,7 +183,7 @@ I. git config --global alias.co commit
 
 II. Now you can type git co to commit
 
-i. Clone a GitHub Repository
+# i. Clone a GitHub Repository (If you have created a repository on-line or you have forked an existing one)
 
 I. Go to the directory you want to use
 
@@ -221,7 +217,7 @@ I. Same as :
    git branch fix20
    git checkout fix20
 
-b. Change AndroidManifest.xml in vim
+b. Change AndroidManifest.xml as you need and whish
 
 c. git commit -a -m 'Added Branch fix20' # Commit the change to the branch, but not to master
 
@@ -242,7 +238,7 @@ j. git branch --no-merged # Shows unmerged branches
 k. git branch -v # Shows all branches and their last commits
    # * Points out the branch currently checked out
 
-l. git merge fix20 # Merge the branch version with the master
+l. (from master) git merge fix20 # Merge the branch version with the master (This is called fast-forward merge)
    git push # Push the change to GitHub
 
 m. git branch -d fix20 # You can delete merged branches with this
