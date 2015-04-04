@@ -1,3 +1,2 @@
 This is my new file
 I am testing ssh keys
-You use the password just once
