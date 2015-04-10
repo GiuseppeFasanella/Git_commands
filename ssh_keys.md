@@ -1,8 +1,6 @@
 ssh keys are used to deal with different local users, all of them pushing on a remote repository of github
 
-They are Very useful and easy:
-
-You don't want to type username and passwd every time you push, so:
+They also have the big advantage that you don't have to type username and passwd every time you push, so:
 
 ******************************************************************
 
@@ -25,7 +23,7 @@ crea un config file
 touch ~/.ssh/config
 
 Nel config file scrivi:
-
+*****************************************************
 Host github.com
 
 HostName github.com
@@ -33,18 +31,29 @@ HostName github.com
 User git
 
 IdentityFile ~/.ssh/giuseppe_Amerigo
+****************************************************
+Now, if you:
 
-E tutti gli altri che hai
+git remote add origin git@github:wherever/repo.git
 
-Host github-2
+the user "giuseppe" is associated to the hostname "github" and via the corresponding ssh key it's done. You have now to put your passwd only once in 24 h
+
+******************************************************
+******************************************************
+
+If you have another user_name and you want to push under that name
+
+Host github_me2
 
 Hostname github.com
 
 User git
 
-Altro IdentityFile
+IdentityFile ~/.ssh/anotherUser_Amerigo
 
-Quando ora scrivi github stai puntando al tuo account principale su github
 
-ORA:
-git remote add myorigin git@github-2:user/repo.git
+Now, if you:
+
+git remote add myorigin git@github-me2:wherever/repo.git
+
+You will push using the ssh associated to the second user
