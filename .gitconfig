@@ -1,0 +1,7 @@
+#This file is stored in your home
+
+[user]
+	name = Giuseppe
+	email = I am Amerigo, you know my mail
+[alias]
+	ls = log --oneline
