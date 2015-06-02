@@ -4,8 +4,4 @@ Point is: I am not sure what `git add .` does.
 
 Anyway, a practical way to do it is:
 
-git add \`git status | grep modified | sed 's/\(.\*modified:\s\*\)//'\`
-
-Or even better:
-
 git ls-files --modified | xargs git add
