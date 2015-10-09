@@ -2,76 +2,57 @@
 
 **1 chiave ssh e' associata a "1 e 1 solo" account github**
 
-**1 chiave ssh <---> 1 account github**
+**chiave ssh <---> account github**
 
+Le chiavi ssh possono essere usate in 2 casistiche per gestire:
 
-ssh keys are used to deal with different local users, all of them pushing on a remote repository of github
+1) piu' users che pushano su uno stesso github
 
-They also have the big advantage that you don't have to type username and passwd every time you push, so:
-
-**Una chiave ssh puo' pushare su un solo account github**
+2) Lo stesso user che pusha su diversi github account. In quest'ultimo caso, ricorda che 
+**una chiave ssh puo' pushare su un solo account github al quale e' bi-univocamente legata**, percio' se un utente vuole pushare su diversi account github (come me che ho "gfasanel" e "GiuseppeFasanella") dovra' generare piu' chiavi ssh e mappare ognuna di queste con il relativo github account (ma tanto e' facile e non costa niente) 
 
 ******************************************************************
+
 `cd ~/.ssh`
 
 `ssh-keygen -t rsa -C “mail”`
 
-Dai un nome alla chiave che ti identifichi( esempio giuseppe_Amerigo_rsa )
+Dai un nome alla chiave che ti identifichi( esempio giuseppe_Amerigo )
 
-Troverai chiave pubblica e privata, giuseppe_Amerigo_rsa.pub e giuseppe_Amerigo in ~/.ssh
+Troverai chiave pubblica e privata, giuseppe_Amerigo.pub e giuseppe_Amerigo in ~/.ssh
 
-Apri la chiave pubblica e copia tutto
+Apri la chiave pubblica e copia/incolla tutto su gitHub (**Account -> settings -> SSH Keys**) (attento agli "a capo" che forse danno problemi [accertarsene])
 
-Incolla il contento su gitHub (Account -> settings -> SSH Keys)
+A questo punto devi istruire ssh [penso che se anche non lo fai funziona lo stesso]
 
-A questo punto devi istruire ssh
+`ssh-add ~/.ssh/giuseppe_Amerigo`
 
-ssh-add ~/.ssh/giuseppe_Amerigo_rsa
-
-crea un config file
+crea un config file (qualora non esista gia')
 
 touch ~/.ssh/config
 
 Nel config file scrivi:
 *****************************************************
-Host github.com
+Host gfasanel-github.com #(questo e' solo un nome che gli dai tu per ricordarti a quale account github stai puntando)
 
-HostName github.com
+HostName github.com #(questo deve essere corretto invece)
 
 User git
 
-IdentityFile ~/.ssh/giuseppe_Amerigo
+IdentityFile ~/.ssh/giuseppe_Amerigo #(questo dice: la chiave giuseppe_Amerigo punta a gfasanel-github) 
 ****************************************************
-Now, if you:
 
-git remote add origin git@github:wherever/repo.git
+Ora, se fai
 
-the user "giuseppe" is associated to the hostname "github" and via the corresponding ssh key it's done. You have now to put your passwd only once in 24 h
+git remote add origin git@gfasanel-github:gfasanel/repo.git
+
+ci sara' il corretto appaiamento tra la chiave ssh e l'account gfasanel
 
 ******************************************************
 ******************************************************
 
-If you have another user_name and you want to push under that name
-
-Host github_me2
-
-Hostname github.com
-
-User git
-
-IdentityFile ~/.ssh/anotherUser_Amerigo
-
-
-Now, if you:
-
-git remote add myorigin git@github-me2:wherever/repo.git
-
-You will push using the ssh associated to the second user
-
-Addendum (questo ha correttamente funzionato):
-#when prompted enter `id_rsa_user1` as filename
-ssh-keygen -t rsa
-
+Mettiamo che hai 2 account github, il config sara' cosi'
+--------------------------------------------------------------------------------------------
 # ~/.ssh/config
 Host user1-github
 HostName github.com
@@ -79,11 +60,17 @@ Port 22
 User git
 IdentityFile ~/.ssh/id_rsa_user1
 
-#check original remote origin url
-git remote -v
-origin git@github.com:user1/my-repo.git
+Host user2-github
+HostName github.com
+Port 22
+User git
+IdentityFile ~/.ssh/id_rsa_user2
+---------------------------------------------------------------------------------------------
 
-#change it to use your custom `user1-github` hostname
-git remote rm origin
 git remote add origin git@user1-github:user1/my-repo.git
 
+oppure
+
+git remote add origin git@user2-github:user2/my-repo.git
+
+io uso questo ~/.ssh/config
