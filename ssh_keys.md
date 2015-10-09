@@ -49,7 +49,6 @@ git remote add origin git@gfasanel-github:gfasanel/repo.git
 ci sara' il corretto appaiamento tra la chiave ssh e l'account gfasanel
 
 ******************************************************
-******************************************************
 
 Mettiamo che hai 2 account github, il config sara' cosi'
 --------------------------------------------------------------------------------------------
@@ -74,3 +73,5 @@ oppure
 git remote add origin git@user2-github:user2/my-repo.git
 
 io uso questo ~/.ssh/config
+
+https://github.com/GiuseppeFasanella/Git_commands/blob/master/config
