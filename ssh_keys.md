@@ -4,7 +4,7 @@ They also have the big advantage that you don't have to type username and passwd
 
 ******************************************************************
 
-ssh-keygen -t rsa -C “mail”
+`ssh-keygen -t rsa -C “mail”`
 
 Dai un nome alla chiave che ti identifichi( esempio giuseppe_Amerigo_rsa )
 
