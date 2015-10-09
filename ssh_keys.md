@@ -1,3 +1,8 @@
+**Il concetto da capire subito e':**
+
+**1 chiave ssh <---> 1 account github**
+
+
 ssh keys are used to deal with different local users, all of them pushing on a remote repository of github
 
 They also have the big advantage that you don't have to type username and passwd every time you push, so:
