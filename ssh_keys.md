@@ -60,3 +60,23 @@ Now, if you:
 git remote add myorigin git@github-me2:wherever/repo.git
 
 You will push using the ssh associated to the second user
+
+Addendum (questo ha correttamente funzionato):
+#when prompted enter `id_rsa_user1` as filename
+ssh-keygen -t rsa
+
+# ~/.ssh/config
+Host user1-github
+HostName github.com
+Port 22
+User git
+IdentityFile ~/.ssh/id_rsa_user1
+
+#check original remote origin url
+git remote -v
+origin git@github.com:user1/my-repo.git
+
+#change it to use your custom `user1-github` hostname
+git remote rm origin
+git remote add origin git@user1-github:user1/my-repo.git
+
