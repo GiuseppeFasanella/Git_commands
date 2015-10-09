@@ -3,16 +3,17 @@ ssh keys are used to deal with different local users, all of them pushing on a r
 They also have the big advantage that you don't have to type username and passwd every time you push, so:
 
 ******************************************************************
+`cd ~/.ssh`
 
 `ssh-keygen -t rsa -C “mail”`
 
 Dai un nome alla chiave che ti identifichi( esempio giuseppe_Amerigo_rsa )
 
-Metti chiave pubblica e privata, giuseppe_Amerigo_rsa.pub e giuseppe_Amerigo, in ~/.ssh
+Troverai chiave pubblica e privata, giuseppe_Amerigo_rsa.pub e giuseppe_Amerigo in ~/.ssh
 
 Apri la chiave pubblica e copia tutto
 
-Incolla il contento su gitHub (Accounti settings, SSH Keys)
+Incolla il contento su gitHub (Account -> settings -> SSH Keys)
 
 A questo punto devi istruire ssh
 
