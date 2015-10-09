@@ -1,5 +1,7 @@
 **Il concetto da capire subito e':**
 
+**1 chiave ssh e' associata a "1 e 1 solo" account github**
+
 **1 chiave ssh <---> 1 account github**
 
 
