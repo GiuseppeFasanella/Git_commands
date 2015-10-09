@@ -1,0 +1,13 @@
+#put this in ~/.ssh/
+
+Host github.com
+HostName github.com
+User     git
+IdentityFile ~/.ssh/giuseppe_rsa
+#git remote add origin git@github:GiuseppeFasanella/repo.git                                                                                                                     
+
+Host gfasanel-github
+HostName github.com
+User     git
+IdentityFile ~/.ssh/giuseppe_Amerigo
+#git remote add origin git@gfasanel-github:gfasanel/repo.git
