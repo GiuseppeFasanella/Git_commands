@@ -1,2 +1,2 @@
 
-`![alt tag](https://raw.githubusercontent.com/GiuseppeFasanella/Git_commands/master/images/basso.png)`
+`![alt tag](https://github.com/GiuseppeFasanella/Vidyo/blob/master/condivisione_slide_vidyo2.png)`
