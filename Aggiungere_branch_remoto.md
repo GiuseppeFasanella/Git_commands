@@ -3,5 +3,5 @@ Supponiamo che hai clonato una repository e a un certo punto l'amministratore ag
 ```
 #Per prenderti il branch
 git fetch origin
-git checkout new_remote_branch_I_dont_have
+git checkout -b new_remote_branch_I_dont_have
 ```
