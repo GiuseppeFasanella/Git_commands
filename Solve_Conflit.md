@@ -11,6 +11,6 @@ In linea di principio, e' **facile**:
 * **git add dei file che hai modificato**
 * **git commit** (SENZA MESSAGGIO)
 * Si aprira' (con qualche editor, tipo __nano__) una pagina di dialogo
-* **Ctrl + X** e passa la paura
+* **Ctrl + X** e passa la paura ; oppure se e' quella merda di vim **ESC :q**
 
 * Ora puoi andare avanti, cambiare branch, fare tutto cio' che vuoi con git
