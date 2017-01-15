@@ -3,7 +3,7 @@ Supponiamo che hai clonato una repository e a un certo punto l'amministratore ag
 ```
 #Per prenderti il branch
 git fetch origin
-git checkout -b name_for_your_local_branch_copy_of_the_new_remote_branch_you_dont_have origin/new_remote_branch_I_dont_have
+git checkout -b the_name_you_want origin/new_remote_branch_I_dont_have
 #Ricompila
 #scram b -j 16
 
